@@ -79,6 +79,8 @@ options are:
 * opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.
 This is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.
 
+* opts.failOnInvalidJSON - if true, will fail when a `package.json` file is invalid
+
 default `opts` values:
 
 ```js
@@ -106,7 +108,8 @@ default `opts` values:
         });
     },
     moduleDirectory: 'node_modules',
-    preserveSymlinks: false
+    preserveSymlinks: false,
+    failOnInvalidJSON: false
 }
 ```
 
@@ -145,6 +148,8 @@ options are:
 * opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.
 This is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.
 
+* opts.failOnInvalidJSON - if true, will throw when a `package.json` file is invalid
+
 default `opts` values:
 
 ```js
@@ -172,7 +177,8 @@ default `opts` values:
         return stat.isDirectory();
     },
     moduleDirectory: 'node_modules',
-    preserveSymlinks: false
+    preserveSymlinks: false,
+    failOnInvalidJSON: false
 }
 ```
 
